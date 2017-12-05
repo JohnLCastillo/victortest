@@ -1,3 +1,36 @@
+//Max and min drill 
+
+const numbers = [2, 13, 4, 11, 5, 7, 9];
+
+function max(numbers) {
+    let i = 0;
+    let myCounter = numbers[0];
+    while (i < numbers.length) {
+        if (numbers[i] > myCounter) {
+            myCounter = numbers[i];
+        }
+        i++;
+    }
+    console.log(myCounter);
+}
+
+max(numbers);
+
+function min(numbers) {
+    let i = 0;
+    let myMin = numbers[0];
+    while (i < numbers.length) {
+        if (numbers[i] < myMin) {
+            myMin = numbers[i];
+        }
+        i++;
+    }
+    console.log(myMin);
+}
+
+min(numbers);
+
+
 function fizzBuzz(num) {
     for (let i = 1; i <= num; i++) {
         switch (true) {
