@@ -97,18 +97,75 @@
 // average([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 
-function repeat(fn,n){
-  for(let i = 0;i <= n;i++){
-    fn();
-  }
+// function repeat(fn,n){
+//   for(let i = 0;i <= n;i++){
+//     fn();
+//   }
+// }
+
+// function hello(){
+//   console.log('Hello world');
+// }
+
+// function goodbye(){
+//   console.log('Goodbye World')
+// }
+
+// repeat(goodbye,10);
+
+
+//Functions as arguments (2)
+
+// Return only names that begin with 'R'
+const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+
+
+// TASK -- DEFINE YOUR FILTER FUNCTION BELOW:
+function filter(arr, fn) {
+	let newArray = [];
+	for (let i = 0; i < arr.length; i++){
+		if (fn(arr[i])) {
+			//Check if invoking the fn function while passing in the current element of arr returns true
+			newArray.push(arr[i]);			
+		}
+		//Push the current element of arr into our newArray
+	}
+	return newArray;
 }
 
-function hello(){
-  console.log('Hello world');
-}
+const filteredNames = filter(myNames, function(name) {
+	// This is a "predicate function" - it's a function that only returns a boolean
+	return name[0] === 'R';
+});
 
-function goodbye(){
-  console.log('Goodbye World')
-}
+console.log(filteredNames) // => ['Rich', 'Ray']
 
-repeat(goodbye,10);
+
+
+//Functions as arguments (2) with Fat Arrow
+
+// // Return only names that begin with 'R'
+// const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+
+
+// // TASK -- DEFINE YOUR FILTER FUNCTION BELOW:
+// function filter(arr, fn) {
+// 	let newArray = [];
+// 	for (let i = 0; i < arr.length; i++){
+// 		if (fn(arr[i])) {
+// 			//Check if invoking the fn function while passing in the current element of arr returns true
+// 			newArray.push(arr[i]);			
+// 		}
+// 		//Push the current element of arr into our newArray
+// 	}
+// 	return newArray;
+// }
+
+// const filteredNames = filter((myNames, name) => name[0] === 'R'); 
+// 	// This is a "predicate function" - it's a function that only returns a boolean
+
+
+
+// console.log(filteredNames) // => ['Rich', 'Ray']
+
+
