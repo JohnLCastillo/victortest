@@ -168,23 +168,62 @@
 
 // console.log(filteredNames) // => ['Rich', 'Ray']
 
-function hazardWarningCreator(typeOfWarning) {
-  let warningCounter = 0;
-  if (warningCounter === 2 || 0 ) {
-    let sup = 'times';
-  }else{
-    let sup = 'time';
-  }
-  return function (location) {
-    warningCounter++;
-    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}`);
-    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${sup} today`);
-  }
+// function hazardWarningCreator(typeOfWarning) {
+//   let warningCounter = 0;
+//   if (warningCounter === 2 || 0 ) {
+//     let sup = 'times';
+//   }else{
+//     let sup = 'time';
+//   }
+//   return function (location) {
+//     warningCounter++;
+//     console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}`);
+//     console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${sup} today`);
+//   }
+// }
+
+// const rocksWarning = hazardWarningCreator('Rocks on the Road');
+// const hurricaneWarning = hazardWarningCreator('Gust of Wind');
+// const earthquakeWarning = hazardWarningCreator('EARTH IS SHAKING RUN');
+
+// rocksWarning('Main St and Pacific Ave');
+// rocksWarning('Centinela Ave and Olympic Blvd');
+
+// const myNumbers = [1, 2, 3, 4, 5, 6];
+
+// const evens = myNumbers.filter(num => num % 2 === 0);
+// console.log(evens);
+
+
+// const turtArray2 = [1, 2, -4, -6, 2, 3];
+
+const turtleArray = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+//Pull each movement from the main array
+
+
+function is_wanted(movement) {
+	if (movement[0] >= 0 && movement[1] >= 0){
+		return true;
+	}
 }
 
-const rocksWarning = hazardWarningCreator('Rocks on the Road');
-const hurricaneWarning = hazardWarningCreator('Gust of Wind');
-const earthquakeWarning = hazardWarningCreator('EARTH IS SHAKING RUN');
+console.log(turtleArray.filter(is_wanted));
 
-rocksWarning('Main St and Pacific Ave');
-rocksWarning('Centinela Ave and Olympic Blvd');
+// const turtleMove = turtleArray.filter(movement => movemenet < 0);
+
+
+// function (sub1, sub2) {
+
+// }
+// function turtleCheck(turtleArray){
+// 	const check = [];
+// 	for (i = 0; i < turtleArray; i++) {
+// 		for (j = 0; j < turtleArray[i]; j++) {
+// 			const check = turtleArray.filter(j => j > 0);
+// 		}
+// 	}
+// 	console.log(check);
+// } 
+
+// turtleCheck();
