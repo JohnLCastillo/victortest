@@ -50,29 +50,29 @@
 //     }
 // }
 
-function fizzBuzz(num) {
-  for (let i = 1; i <= num; i++) {
-    let ans = i % 15;
-    let ans2 = i % 5;
-    let ans3 = i % 3;
-      switch (ans,ans2,ans3) {
-          case 0:
-              console.log('FizzBuzz');
-              break;
-          case 5:
-              console.log('Fizz');
-              break;
-          case 3:
-              console.log('Buzz');
-              break;
-          default:
-              console.log(i);
-              break;
-      }
-  }
-}
+// function fizzBuzz(num) {
+//   for (let i = 1; i <= num; i++) {
+//     let ans = i % 15;
+//     let ans2 = i % 5;
+//     let ans3 = i % 3;
+//       switch (ans,ans2,ans3) {
+//           case 0:
+//               console.log('FizzBuzz');
+//               break;
+//           case 5:
+//               console.log('Fizz');
+//               break;
+//           case 3:
+//               console.log('Buzz');
+//               break;
+//           default:
+//               console.log(i);
+//               break;
+//       }
+//   }
+// }
 
-fizzBuzz(15);
+// fizzBuzz(15);
 
 // function average(numbers) {
 //   let total = numbers[0];
@@ -95,3 +95,20 @@ fizzBuzz(15);
 //   }
 
 // average([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+
+function repeat(fn,n){
+  for(let i = 0;i <= n;i++){
+    fn();
+  }
+}
+
+function hello(){
+  console.log('Hello world');
+}
+
+function goodbye(){
+  console.log('Goodbye World')
+}
+
+repeat(goodbye,10);
