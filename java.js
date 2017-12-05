@@ -50,7 +50,29 @@
 //     }
 // }
 
-// fizzBuzz(15);
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    let ans = i % 15;
+    let ans2 = i % 5;
+    let ans3 = i % 3;
+      switch (ans,ans2,ans3) {
+          case 0:
+              console.log('FizzBuzz');
+              break;
+          case 5:
+              console.log('Fizz');
+              break;
+          case 3:
+              console.log('Buzz');
+              break;
+          default:
+              console.log(i);
+              break;
+      }
+  }
+}
+
+fizzBuzz(15);
 
 // function average(numbers) {
 //   let total = numbers[0];
@@ -62,14 +84,14 @@
 //   console.log(total / numbers.length);
 // }
 
-function average(numbers) {
-    let total = numbers[0];
+// function average(numbers) {
+//     let total = numbers[0];
 
-    numbers.forEach(function(i){
-      total += i;
-    });
-  // console.log(total);
-  console.log(total / numbers.length);
-  }
+//     numbers.forEach(function(i){
+//       total += i;
+//     });
+//   // console.log(total);
+//   console.log(total / numbers.length);
+//   }
 
-average([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+// average([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
