@@ -117,28 +117,28 @@
 //Functions as arguments (2)
 
 // Return only names that begin with 'R'
-const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+// const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
 
 
-// TASK -- DEFINE YOUR FILTER FUNCTION BELOW:
-function filter(arr, fn) {
-	let newArray = [];
-	for (let i = 0; i < arr.length; i++){
-		if (fn(arr[i])) {
-			//Check if invoking the fn function while passing in the current element of arr returns true
-			newArray.push(arr[i]);			
-		}
-		//Push the current element of arr into our newArray
-	}
-	return newArray;
-}
+// // TASK -- DEFINE YOUR FILTER FUNCTION BELOW:
+// function filter(arr, fn) {
+// 	let newArray = [];
+// 	for (let i = 0; i < arr.length; i++){
+// 		if (fn(arr[i])) {
+// 			//Check if invoking the fn function while passing in the current element of arr returns true
+// 			newArray.push(arr[i]);			
+// 		}
+// 		//Push the current element of arr into our newArray
+// 	}
+// 	return newArray;
+// }
 
-const filteredNames = filter(myNames, function(name) {
-	// This is a "predicate function" - it's a function that only returns a boolean
-	return name[0] === 'R';
-});
+// const filteredNames = filter(myNames, function(name) {
+// 	// This is a "predicate function" - it's a function that only returns a boolean
+// 	return name[0] === 'R';
+// });
 
-console.log(filteredNames) // => ['Rich', 'Ray']
+// console.log(filteredNames) // => ['Rich', 'Ray']
 
 
 
@@ -168,4 +168,23 @@ console.log(filteredNames) // => ['Rich', 'Ray']
 
 // console.log(filteredNames) // => ['Rich', 'Ray']
 
+function hazardWarningCreator(typeOfWarning) {
+  let warningCounter = 0;
+  if (warningCounter === 2 || 0 ) {
+    let sup = 'times';
+  }else{
+    let sup = 'time';
+  }
+  return function (location) {
+    warningCounter++;
+    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}`);
+    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${sup} today`);
+  }
+}
 
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const hurricaneWarning = hazardWarningCreator('Gust of Wind');
+const earthquakeWarning = hazardWarningCreator('EARTH IS SHAKING RUN');
+
+rocksWarning('Main St and Pacific Ave');
+rocksWarning('Centinela Ave and Olympic Blvd');
