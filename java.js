@@ -182,9 +182,22 @@ function hazardWarningCreator(typeOfWarning) {
   }
 }
 
-const rocksWarning = hazardWarningCreator('Rocks on the Road');
-const hurricaneWarning = hazardWarningCreator('Gust of Wind');
-const earthquakeWarning = hazardWarningCreator('EARTH IS SHAKING RUN');
+console.log(turtleArray.filter(is_wanted));
 
-rocksWarning('Main St and Pacific Ave');
-rocksWarning('Centinela Ave and Olympic Blvd');
+// const turtleMove = turtleArray.filter(movement => movemenet < 0);
+
+
+// function (sub1, sub2) {
+
+// }
+// function turtleCheck(turtleArray){
+// 	const check = [];
+// 	for (i = 0; i < turtleArray; i++) {
+// 		for (j = 0; j < turtleArray[i]; j++) {
+// 			const check = turtleArray.filter(j => j > 0);
+// 		}
+// 	}
+// 	console.log(check);
+// } 
+
+// turtleCheck();
