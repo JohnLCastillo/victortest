@@ -170,7 +170,7 @@
 
 function hazardWarningCreator(typeOfWarning) {
   let warningCounter = 0;
-  if (warningCounter === 2 || 0 ) {
+  if (warningCounter >= 2 || 0 ) {
     let sup = 'times';
   }else{
     let sup = 'time';
