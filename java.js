@@ -31,32 +31,32 @@
 // min(numbers);
 
 
-// function fizzBuzz(num) {
-//     for (let i = 1; i <= num; i++) {
-//         switch (true) {
-//             case i % 15 === 0:
-//                 console.log('FizzBuzz');
-//                 break;
-//             case i % 3 === 0:
-//                 console.log('Fizz');
-//                 break;
-//             case i % 5 === 0:
-//                 console.log('Buzz');
-//                 break;
-//             default:
-//                 console.log(i);
-//                 break;
-//         }
-//     }
-// }
+function fizzBuzz(num) {
+    for (let i = 1; i <= num; i++) {
+        switch (true) {
+            case i % 15 === 0:
+                console.log('FizzBuzz');
+                break;
+            case i % 3 === 0:
+                console.log('Fizz');
+                break;
+            case i % 5 === 0:
+                console.log('Buzz');
+                break;
+            default:
+                console.log(i);
+                break;
+        }
+    }
+}
 
 // function fizzBuzz(num) {
 //   for (let i = 1; i <= num; i++) {
-//     let ans = i % 15;
-//     let ans2 = i % 5;
-//     let ans3 = i % 3;
-//       switch (ans,ans2,ans3) {
-//           case 0:
+//     // let ans = i % 15 === 0;
+//     // let ans2 = i % 5 === 0;
+//     // let ans3 = i % 3 === 0;
+//       switch (ans) {
+//           case 15:
 //               console.log('FizzBuzz');
 //               break;
 //           case 5:
@@ -72,7 +72,7 @@
 //   }
 // }
 
-// fizzBuzz(15);
+fizzBuzz(15);
 
 // function average(numbers) {
 //   let total = numbers[0];
@@ -144,7 +144,7 @@
 
 //Functions as arguments (2) with Fat Arrow
 
-// // Return only names that begin with 'R'
+// Return only names that begin with 'R'
 // const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
 
 
@@ -161,28 +161,35 @@
 // 	return newArray;
 // }
 
-// const filteredNames = filter((myNames, name) => name[0] === 'R'); 
-// 	// This is a "predicate function" - it's a function that only returns a boolean
+// console.log(filter(myNames, (name) => name[0] === 'R'));
+
+	// This is a "predicate function" - it's a function that only returns a boolean
 
 
 
 // console.log(filteredNames) // => ['Rich', 'Ray']
 
-function hazardWarningCreator(typeOfWarning) {
-  let warningCounter = 0;
-  if (warningCounter >= 2 || 0 ) {
-    let sup = 'times';
-  }else{
-    let sup = 'time';
-  }
-  return function (location) {
-    warningCounter++;
-    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}`);
-    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${sup} today`);
-  }
-}
+// function hazardWarningCreator(typeOfWarning) {
+//   let warningCounter = 0;
+//   let sup;
+//   return function (location) {
+//     warningCounter++;
+//     if (warningCounter >= 2 || 0) {
+//       sup = 'times';
+//     } else {
+//       sup = 'time';
+//     }
+//     console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}`);
+//     console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${sup} today`);
+//   }
+// }
+// const rocksWarning = hazardWarningCreator('Rocks on the Road');
+// const earthquakeWarning = hazardWarningCreator('Earth is moving');
+// const hurricaneWarning = hazardWarningCreator('Gust of wind');
 
-console.log(turtleArray.filter(is_wanted));
+// rocksWarning('Main St and Pacific Ave');
+// rocksWarning('Centinela Ave and Olympic Blvd');
+// console.log(turtleArray.filter(is_wanted));
 
 // const turtleMove = turtleArray.filter(movement => movemenet < 0);
 
